@@ -98,9 +98,25 @@ To use mdx, you will need [XQuartz](https://www.xquartz.org/).
         mdx.py xxxxx.slc 
         # show the slc picture (.xml description file needed)
 
-6. Register a python nobebook kernel
+6. Register a python nobebook kernel (optional)
 
         python -m ipykernel install --user --name isce2
+
+7. Install other packages used in EarthScope 2024 ISCE+ short course (optional)
+
+        conda install -c conda-forge asf_search -y
+        conda install xarray -y
+        conda install conda-forge::awscli -y
+        conda install -c conda-forge sentineleof -y
+        conda install conda-forge::rasterio -y
+
+        # for ARIA-tools, see https://github.com/aria-tools/ARIA-tools
+        conda install arm_pyart joblib netcdf4 parallel tile_mate
+        git clone https://github.com/aria-tools/ARIA-tools.git
+        cd ARIA-tools
+        python -m pip install -e .
+
+        
     
 Enjoy!
 
